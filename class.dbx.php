@@ -14,7 +14,8 @@ class dbxAPI {
 		'files/copy_reference/save'=>'copy_reference,path',
 		'files/create_folder'=>'path',
 		'files/get_temporary_link'=>'path',
-		'files/get_metadata'=>'path'
+		'files/get_metadata'=>'path',
+		'sharing/get_shared_links'=>''
 	); 
       
     function __construct ($token=Null) {
@@ -65,51 +66,6 @@ class dbxAPI {
 		
 		return $this->getData($data,$url);
 	}
-	
-	
-	/*
-	
-	// Gets the list of files & folders including recursive
-    public function list_folder($path,$flags=false) {
-    
-    	$url = 'files/list_folder';
-    	$data = array('path'=>$path);
-    	if (is_array($flags)) $data += $flags;
-    	
-    	return $this->getData($data,$url);
-    }
-    
-    
-    
-    // Delets file or folder
-    public function delete($path) {
-    
-    	$url = 'files/delete';
-    	$data = array('path'=>$path);
-    	
-    	return $this->getData($data,$url);
-    }
-    
-    // Copy file from the old path to the new one
-    public function copy($from_path,$to_path) {
-    
-    	$url = 'files/copy';
-    	$data = array('from_path'=>$from_path,'to_path'=>$to_path);
-    	
-    	return $this->getData($data,$url);
-    }
-    
-    // Create a new folder
-    
-    public function create_folder($path) {
-    
-    	$url = 'files/delete';
-    	$data = array('path'=>$path);
-    	
-    	return $this->getData($data,$url);
-    }
-    
-    */
 }
  
 ?>
